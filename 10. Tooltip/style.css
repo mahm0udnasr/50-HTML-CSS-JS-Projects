@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  font-family: sans-serif;
+}
+
+span {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+span::before {
+  content: "Content Show";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  margin: 0 auto;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+span:hover::before {
+  top: -50px;
+  opacity: 1;
+}
